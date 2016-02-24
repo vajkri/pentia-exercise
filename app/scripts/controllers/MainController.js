@@ -1,8 +1,11 @@
 /**
  * Created by krisztinavajda on 24/02/16.
  */
-app.controller('MainCtrl', function ($scope) {
+app.controller('MainCtrl', function ($scope, $timeout) {
   $scope.user = {};
+  $scope.showSuccess = false;
+  $scope.registerFormSubmitted = false;
+
 
   /* *
   Suggested form data structure in JSON:
@@ -39,7 +42,12 @@ app.controller('MainCtrl', function ($scope) {
   ];
   */
 
-  $scope.register = function(user) {
+  $scope.submitRegisterForm = function(user) {
+    $scope.registerFormSubmitted = true;
     console.log('in function register()', user);
+
+    $timeout(function() {
+      $scope.showSuccess = true;
+    }, 500);
   }
 });

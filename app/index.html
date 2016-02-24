@@ -14,6 +14,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -37,7 +39,8 @@
         <h1 class="welcome-text">Kom til arrangement <br> HOS PENTIA</h1>
 
         <!-- Register form -->
-        <form name="formRegister" class="form--register" ng-submit="formRegister.$valid && register(user)" novalidate>
+        <form name="formRegister" class="form--register"
+              ng-submit="formRegister.$valid && !registerFormSubmitted && submitRegisterForm(user)" novalidate>
           <fieldset>
             <legend>Tilmelding</legend>
             <div class="input-group">
@@ -77,9 +80,16 @@
             </div>
           </fieldset>
 
-          <button class="full-width u-mt button--shiny"
-                  ng-class="{'disabled' : !formRegister.$valid }"
-                  type="submit">Tilmeld</button>
+          <button class="button--submit button--shiny full-width u-mt"
+                  ng-class="{'disabled' : !formRegister.$valid, 'success': showSuccess }"
+                  type="submit">
+            <span class="button--submit__default">
+              Tilmeld
+            </span>
+            <span class="button--submit__success">
+              <i class="fa fa-check"></i> Det lykkedes!
+            </span>
+          </button>
         </form>
       </div>
 
