@@ -43,11 +43,11 @@ app.controller('MainCtrl', function ($scope, $timeout) {
   */
 
   $scope.submitRegisterForm = function(user) {
+    console.log('in function submitRegisterForm()', user);
     $scope.registerFormSubmitted = true;
-    console.log('in function register()', user);
 
     $timeout(function() {
       $scope.showSuccess = true;
     }, 500);
-  }
+  };
 });
