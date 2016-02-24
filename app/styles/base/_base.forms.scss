@@ -51,17 +51,29 @@ input {
 	&[type="email"] {
 		padding: 0 10px;
 
+    border: 1px solid transparent; //needed so size doesn't change when validation gets added
 		border-radius: $base-border-radius;
 
 		@include inuit-font-size(15px);
 		line-height: 45px;
-		color: darken($color-brand, 40%);
 		font-weight: 400;
+		color: darken($color-brand, 40%);
 
 		@include placeholder {
 			color: $color-brand;
 			font-weight: 300;
 		}
+
+    &.ng-dirty.ng-invalid {
+      box-shadow: 0 0 3px $color-negative;
+      border: 1px solid $color-negative;
+    }
+    &.ng-dirty.ng-valid {
+      &:not(.ng-empty) {
+        box-shadow: 0 0 3px $color-positive;
+        border: 1px solid $color-positive;
+      }
+    }
 	}
 
 	&.full-width {

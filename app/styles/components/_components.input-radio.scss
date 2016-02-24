@@ -34,6 +34,13 @@
 		transition: transform 400ms cubic-bezier(.45,1.8,.5,.75);
 	}
 
+  //Create custom outline when focused
+  &:focus {
+    &:after {
+      border: 1px solid rgba($color-brand-dark, .6);
+    }
+  }
+
 	&:checked {
 		&:before {
 			transform: scale(1);
