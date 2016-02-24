@@ -5,12 +5,56 @@
 \*------------------------------------*/
 
 button {
-	padding: 8px 20px;
+	padding: 0 20px;
 
-	border: 3px solid $color-gray;
-	background: transparent;
-	outline: none;
+	border: none;
+	border-radius: $base-border-radius;
+	background: $color-brand-dark;
 
 	@include inuit-font-size(16px);
-	color: $color-gray;
+	color: white;
+	line-height: 45px;
+
+	&.full-width {
+		width: 100%;
+	}
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	&.disabled {
+		opacity: 0.4;
+		cursor: not-allowed;
+		user-select: none;
+	}
+}
+
+
+//Variations
+.button--shiny {
+	position: relative;
+	overflow: hidden;
+	transition: 800ms ease all;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -40%;
+		right: 110%;
+		width: 30px;
+		height: 200%;
+		background: rgba($color-brand, .3);
+		transform: rotate(20deg);
+	}
+
+	&:not(.disabled):hover {
+		background: lighten($color-brand-dark, 5%);
+
+		&:before {
+			right: -50%;
+			transition: 900ms ease all;
+		}
+	}
 }

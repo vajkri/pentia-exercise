@@ -193,3 +193,19 @@ Stagger delay mixin, takes 4 parameters:
 		$i: $i - 1;
 	}
 }
+
+
+
+
+
+/*
+Mixin for styling placeholders
+*/
+@mixin placeholder {
+	$placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+	@each $placeholder in $placeholders {
+		&:#{$placeholder}-placeholder {
+			@content;
+		}
+	}
+}

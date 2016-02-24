@@ -1,0 +1,56 @@
+/*------------------------------------*\
+
+		_components.input-radio
+    Created by krisztinavajda on 24/02/16.
+\*------------------------------------*/
+
+.input-radio__label {
+	position: relative;
+
+	cursor: pointer;
+}
+
+.input-radio {
+	margin: 0 15px 0 0 ;
+	position: relative;
+	left: 3px;
+
+	cursor: pointer;
+
+	&:before {
+		content: "";
+		width: 12px;
+		height: 12px;
+
+		position: absolute;
+		top: -1px;
+		left: 1px;
+		z-index: 1;
+
+		background: $color-brand-dark;
+		border-radius: 100px;
+
+		transform: scale(0);
+		transition: transform 400ms cubic-bezier(.45,1.8,.5,.75);
+	}
+
+	&:checked {
+		&:before {
+			transform: scale(1);
+		}
+	}
+
+	&:after {
+		content: "";
+		width: 20px;
+		height: 20px;
+
+		position: absolute;
+		top: -5px;
+		left: -3px;
+
+		background: white;
+		border: 2px solid white;
+		border-radius: 100px;
+	}
+}

@@ -4,15 +4,11 @@
     Created by krisztinavajda on 08/01/16.
 \*------------------------------------*/
 
-$color-brand:       lighten(crimson, 5%);
-$color-tomato:      lighten(tomato, 5%);
-$color-midway:      #f65356;
+$color-brand:       #8dc5d7;
 $color-gray:        #282828;
 $color-gray-light:  #999;
 $color-gray-ui:     #ddd;
-$color-green:       #859900;
-//$color-highlight:   #fff;
-//$color-tint:        #f2f2f2;
+$color-brand-dark:  darken($color-brand, 20%);
 //$color-positive:    #3f990f;
 //$color-negative:    #9f102e;
 
@@ -23,14 +19,6 @@ $color-green:       #859900;
 // Page
 $base-background-color:   white;
 $base-text-color:         $color-gray;
-
-
-
-
-
-// Gradient
-$gradient-tomato:         $color-tomato;
-$gradient-crimson:        $color-brand;
 
 
 
@@ -47,28 +35,10 @@ $color-links-carousel:    $color-gray-ui;
 
 // Text
 $color-text-dark:       $color-gray;
-$color-code:            $color-green;
-$color-pre-background:  $color-gray;
-$color-pre:             #fff;
 
 
 
 
 
 // Buttons
-$color-btn:     $color-links;
-
-
-
-
-
-// Iconic
-$color-iconic:  $color-gray-ui;
-
-
-
-
-
-// Contrasted
-$contrasted-dark-default: #000000;
-$contrasted-light-default: #ffffff;
+$color-btn:     $color-brand-dark;

@@ -1,0 +1,80 @@
+/*------------------------------------*\
+
+		_base.forms
+    Created by krisztinavajda on 24/02/16.
+\*------------------------------------*/
+
+form {
+	width: 380px;
+	max-width: 90%;
+	margin: 40px auto 0;
+	padding: 30px;
+
+	background: rgba(darken($color-brand, 8%), 0.6);
+	border-radius: $base-border-radius;
+
+	@include media-query(palm) {
+		padding: 15px;
+	}
+}
+
+fieldset {
+	margin-top: 20px;
+
+	border: none;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+legend {
+	padding-bottom: 10px;
+
+	@include inuit-font-size(16px);
+	font-weight: 600;
+	color: white;
+}
+
+.input-group {
+	margin-top: 10px;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+input {
+	border: none;
+
+	&[type="text"],
+	&[type="email"] {
+		padding: 0 10px;
+
+		border-radius: $base-border-radius;
+
+		@include inuit-font-size(15px);
+		line-height: 45px;
+		color: darken($color-brand, 40%);
+		font-weight: 400;
+
+		@include placeholder {
+			color: $color-brand;
+			font-weight: 300;
+		}
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+
+	&.input--short {
+		width: 60px;
+	}
+}
+
+label {
+	color: white;
+	@include inuit-font-size(15px);
+	font-weight: 400;
+}
