@@ -1,0 +1,180 @@
+// bower:scss
+// endbower
+
+
+
+
+
+
+/*------------------------------------*\
+
+		main.scss
+    Created by krisztinavajda on 24/02/16.
+\*------------------------------------*/
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global variables, site-wide settings, config switches, etc.
+ *
+ * Default..............inuitcss’ default settings.
+ * Global...............Globally-available variables and settings/config.
+ * Colors...............Manage our color palette in isolation.
+ * Responsive...........Set up and name our breakpoints.
+ *
+ *
+ * TOOLS
+ * Site-wide mixins and functions.
+ *
+ * Functions............inuitcss’ default functions.
+ * Mixins...............inuitcss’ default mixins.
+ * Mixins...............Our extension of inuitcss’ mixins.
+ * Responsive...........Responsive tooling (requires responsive settings).
+ * Aliases..............Aliases onto longer inuitcss variables and mixins.
+ *
+ *
+ * GENERIC
+ * Low-specificity, far-reaching rulesets (e.g. resets).
+ *
+ * Normalize.css........A level playing field.
+ * Reset................A pared back reset to remove margins.
+ * Box-sizing...........Better default `box-sizing`.
+ * Shared...............Sensibly and tersely share global commonalities.
+ *
+ *
+ * BASE
+ * Unclassed HTML elements (e.g. a {}, blockquote {}, address {}).
+ *
+ * Page.................Page-level styles (HTML element).
+ * Page.................Our extension of the inuitcss page module.
+ * Headings.............Heading styles
+ * Type.................Misc type styles
+ * Links................Hyperlink styles
+ * Lists................inuitcss list styles
+ * Images...............inuitcss images
+ * Quotes...............Styling for blockquotes, etc.
+ *
+ *
+ * OBJECTS
+ * Objects, abstractions, and design patterns (e.g. .media {}).
+ *
+ * Wrappers.............Wrappers and page constraints.
+ * Buttons..............inuitcss’ buttons module.
+ * Layout...............inuitcss’ layout tool.
+ * Box..................inuitcss’ box object.
+ * Media................The media object.
+ * Flag.................The flag object.
+ * UI list..............inuitcss’ UI list.
+ *
+ *
+ * COMPONENTS
+ * Discrete, complete chunks of UI (e.g. .carousel {}).
+ *
+ * Page-head............Page header styles.
+ * Bands................Full-width page bands.
+ * Promo................Lead promo blocks on the home page.
+ * Page-foot............Page footer styles.
+ * Page-micro...........Page copyright styles.
+ * Site-nav.............Site’s main nav area.
+ * Buttons..............Extension of inuitcss’ buttons.
+ * Boxes................Extension of inuitcss’ box object
+ * Post.................Post-specific styles.
+ * Pull-quote...........Large, featured quotes.
+ * Carousel.............Pure CSS carousel component.
+ * Iconic...............Iconic icon styles.
+ * Sprites..............Image sprite styles.
+ * Feature list.........Big blocky lists of feature items.
+ * Annotate.............Pure CSS figure annotations.
+ * Ads..................AdPacks overrides.
+ * Client-list..........Amazing people I’ve had the pleasure of working with.
+ *
+ *
+ * TRUMPS
+ * High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
+ *
+ * Clearfix.............I can’t believe we still need this in 2014.
+ * Widths...............Simple width helper classes.
+ * Widths-responsive....Polyfill for responsive width classes.
+ * Spacing..............Micro-level spacing.
+ * Show/hide............Helpers to show and side stuff.
+ */
+//TODO: update table of contents
+
+
+
+
+
+/**
+ * #SETTINGS
+ */
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+@import "settings/settings.defaults";
+@import "settings/settings.colors";
+@import "settings/settings.responsive";
+
+
+
+
+
+/**
+ * #TOOLS
+ */
+@import "tools/tools.functions";
+@import "tools/tools.mixins";
+@import "tools/tools.responsive";
+
+
+
+
+
+/**
+ * #GENERIC
+ */
+@import "generic/generic.normalize";
+@import "generic/generic.reset";
+
+
+
+
+
+/**
+ * #BASE
+ */
+@import "base/_base.page";
+@import "base/_base.headings";
+@import "base/_base.sections";
+@import "base/_base.type";
+@import "base/_base.lists";
+@import "base/_base.buttons";
+
+
+
+
+
+/**
+ * #OBJECTS
+ */
+
+
+
+
+
+/**
+ * #COMPONENTS
+ */
+@import "components/components.main";
+
+
+
+
+
+/**
+ * #TRUMPS
+ */
+$inuit-enable-margins:          true;
+@import "trumps/trumps.spacing";
+@import "trumps/trumps.show-hide";
+@import "trumps/trumps.centering";

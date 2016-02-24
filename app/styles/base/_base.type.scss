@@ -1,0 +1,56 @@
+/*------------------------------------*\
+
+		_base.type
+    Created by krisztinavajda on 02/02/16.
+\*------------------------------------*/
+
+/**
+ * Serif font-family setup
+ */
+.serif {
+	font-family: 'Libre Baskerville', 'Times New Roman', serif;
+}
+
+
+
+
+
+/**
+ * Text sizes
+ */
+.text--huge {
+  @include inuit-font-size(100px);
+	line-height: 1;
+
+  @include media-query(retina) {
+    @include inuit-font-size(120px);
+  }
+	@include media-query(huge) {
+		@include inuit-font-size(120px);
+	}
+  @include media-query(palm) {
+    @include inuit-font-size(50px);
+  }
+}
+
+
+
+
+
+/**
+ * Text colors
+ */
+.text--dark {
+	color: $color-text-dark;
+}
+
+
+
+
+
+/**
+ * Emboldened elements.
+ */
+strong {
+	font-weight: 700;
+}
