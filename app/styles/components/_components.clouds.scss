@@ -1,0 +1,22 @@
+/*------------------------------------*\
+
+		_components.clouds
+    Created by krisztinavajda on 25/02/16.
+\*------------------------------------*/
+
+.clouds {
+	position: absolute;
+	bottom: 250px;
+	z-index: 0;
+
+	animation: cloud-float 100s linear infinite;
+}
+
+@keyframes cloud-float {
+	from {
+		left: 100%;
+	}
+	to {
+		left: -100%;
+	}
+}
