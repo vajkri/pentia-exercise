@@ -18,6 +18,10 @@ main {
 	transform: scaleX(0);
 	transition: 1s ease;
 
+  @include media-query(palm) {
+    max-width: 100%;
+  }
+
 	&.active {
 		transform: scaleX(1);
 
