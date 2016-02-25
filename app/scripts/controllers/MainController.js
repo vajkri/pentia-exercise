@@ -1,7 +1,7 @@
 /**
  * Created by krisztinavajda on 24/02/16.
  */
-app.controller('MainCtrl', function ($scope, $timeout) {
+app.controller('MainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
   $scope.user = {};
   $scope.showSuccess = false;
   $scope.registerFormSubmitted = false;
@@ -42,6 +42,7 @@ app.controller('MainCtrl', function ($scope, $timeout) {
   ];
   */
 
+
   $scope.submitRegisterForm = function(user) {
     console.log('in function submitRegisterForm()', user);
     $scope.registerFormSubmitted = true;
@@ -50,4 +51,4 @@ app.controller('MainCtrl', function ($scope, $timeout) {
       $scope.showSuccess = true;
     }, 500);
   };
-});
+}]);
