@@ -11,14 +11,14 @@
 .layer--foreground {
 	width: 500px;
 	max-width: 100%;
-	margin: auto;
+	margin: $spacing-vertical auto;
 
-  position: relative;
-	//position: absolute;
-	//top: 0;
-	//left: 0;
-	//right: 0;
+	position: relative;
 	z-index: 20;
+
+	@include media-query(palm) {
+		margin: $spacing-vertical-palm auto;
+	}
 }
 
 .layer--background {

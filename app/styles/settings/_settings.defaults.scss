@@ -21,11 +21,6 @@ $base-border-radius:            5px !default;
 
 
 
-// Section max-width
-$section-max-width:             1200px;
-
-
-
 
 // Namespace.
 //
@@ -52,3 +47,11 @@ $inuit-base-spacing-unit--tiny:     round($inuit-base-spacing-unit / 4);
 $inuit-base-spacing-unit--small:    round($inuit-base-spacing-unit / 2);
 $inuit-base-spacing-unit--large:    round($inuit-base-spacing-unit * 2);
 $inuit-base-spacing-unit--huge:     round($inuit-base-spacing-unit * 4);
+
+
+
+
+
+// Spacing
+$spacing-vertical:      $inuit-base-spacing-unit--large;
+$spacing-vertical-palm: $inuit-base-spacing-unit;

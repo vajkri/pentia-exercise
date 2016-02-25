@@ -5,8 +5,16 @@
 \*------------------------------------*/
 
 .welcome-text {
-	margin-top: 80px;
+  display: block;
+  width: 420px;
+  max-width: 90%;
+  height: auto;
+  margin: auto;
 
-	color: white;
-	text-align: center;
+  text-align: center;
+  filter: drop-shadow(1px 1px 1px darken($color-brand, 10%));
+}
+
+.welcome-text__letter {
+  fill: white;
 }
