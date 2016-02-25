@@ -10,7 +10,7 @@ form {
 	margin: 40px auto 0;
 	padding: 30px;
 
-	background: rgba(darken($color-brand, 8%), 0.6);
+	background: rgba(darken($color-brand, 8%), .85);
 	border-radius: $base-border-radius;
 
 	@include media-query(palm) {
