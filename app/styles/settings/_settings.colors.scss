@@ -5,10 +5,13 @@
 \*------------------------------------*/
 
 $color-brand:       #8dc5d7;
+$color-brand-dark:  darken($color-brand, 20%);
+$color-brand-light: lighten($color-brand, 20%);
+
 $color-gray:        #282828;
 $color-gray-light:  #999;
 $color-gray-ui:     #ddd;
-$color-brand-dark:  darken($color-brand, 20%);
+
 $color-positive:    #82d3c5;
 $color-negative:    #d38282;
 

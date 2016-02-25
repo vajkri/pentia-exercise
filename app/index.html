@@ -43,6 +43,7 @@
               ng-submit="formRegister.$valid && !registerFormSubmitted && submitRegisterForm(user)" novalidate>
           <fieldset>
             <legend>Tilmelding</legend>
+            <p class="form__instructions">Alle felter med * skal udfyldes</p>
             <div class="input-group">
               <label for="formRegisterName" class="hide">Navn</label>
               <input class="full-width" id="formRegisterName" type="text" ng-model="user.name" placeholder="Navn *" required>

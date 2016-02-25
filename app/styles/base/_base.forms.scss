@@ -18,8 +18,25 @@ form {
 	}
 }
 
+.form__instructions {
+  width: calc(100% - 100px);
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  color: $color-brand-light;
+  @include inuit-font-size(12px);
+  text-align: right;
+
+  @include media-query(palm) {
+    line-height: 1;
+  }
+}
+
 fieldset {
 	margin-top: 20px;
+
+  position: relative;
 
 	border: none;
 
@@ -34,6 +51,12 @@ legend {
 	@include inuit-font-size(16px);
 	font-weight: 600;
 	color: white;
+
+  fieldset:first-of-type & {
+    @include media-query(palm) {
+      padding-top: 20px;
+    }
+  }
 }
 
 .input-group {
