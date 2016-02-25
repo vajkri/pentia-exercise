@@ -49,13 +49,12 @@ input {
 
 	&[type="text"],
 	&[type="email"] {
-		padding: 0 10px;
+    padding: 12px 10px;
 
     border: 1px solid transparent; //needed so size doesn't change when validation gets added
 		border-radius: $base-border-radius;
 
 		@include inuit-font-size(15px);
-		line-height: 45px;
 		font-weight: 400;
 		color: darken($color-brand, 40%);
 

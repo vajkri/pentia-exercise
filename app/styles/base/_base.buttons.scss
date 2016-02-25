@@ -14,6 +14,7 @@ button {
 	@include inuit-font-size(16px);
 	color: white;
 	line-height: 45px;
+	font-weight: 400;
 
 	&.full-width {
 		width: 100%;
