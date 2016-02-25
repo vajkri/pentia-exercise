@@ -9,10 +9,14 @@
 	bottom: 250px;
 	z-index: 0;
 
-	animation: cloud-float 100s linear infinite;
+  animation: float 100s linear backwards infinite;
+
+  &.clouds--duplicate {
+    animation-delay: 60s;
+  }
 }
 
-@keyframes cloud-float {
+@keyframes float {
 	from {
 		left: 100%;
 	}

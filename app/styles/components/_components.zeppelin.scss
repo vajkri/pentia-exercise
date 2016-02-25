@@ -15,6 +15,18 @@ $anim-time: 120s;
 	.active & {
 		animation: fly-zeppelin $anim-time linear infinite;
 	}
+
+  &.zeppelin--reverse {
+    width: 15%;
+
+    top: 20%;
+    bottom: auto;
+    z-index: 0;
+
+    opacity: 0.9;
+
+    animation-direction: reverse;
+  }
 }
 
 .zeppelin__img {
@@ -27,7 +39,7 @@ $anim-time: 120s;
 .zeppelin__exhaust {
 	display: block;
 	width: 15%;
-	height: auto;
+  height: 50%;
 
 	position: absolute;
 	bottom: 40%;
@@ -38,20 +50,48 @@ $anim-time: 120s;
 	.active & {
 		animation: exhaust $anim-time ease infinite;
 	}
+
+  //Todo: fix exhaust reverse animation
+  //.zeppelin--reverse & {
+  //  left: auto;
+  //  right: -9%;
+  //
+  //  .active & {
+  //    animation: exhaust-reverse $anim-time ease infinite;
+  //  }
+  //}
 }
 
-.zeppelin--invert {
-	width: 150px;
-	position: absolute;
-	top: 20%;
-	z-index: 0;
-	opacity: 0.9;
 
-	.active & {
-		animation: fly-zeppelin $anim-time linear reverse infinite;
-	}
+@keyframes fly-zeppelin {
+  0% {
+    left: -52%;
+  }
+  18% {
+    transform: translate3d(0, 5px, 0);
+  }
+  18.5% {
+    transform: translate3d(0, -5px, 0);
+  }
+  19% {
+    transform: translate3d(0, 0, 0);
+  }
+  29% {
+    transform: translate3d(0, 5px, 0);
+  }
+  29.5% {
+    transform: translate3d(0, -5px, 0);
+  }
+  30% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    left: 102%;
+  }
+  100% {
+    left: 102%;
+  }
 }
-//TODO: add invert exhaust
 
 @keyframes exhaust {
 	18.5% {
@@ -78,32 +118,52 @@ $anim-time: 120s;
 	}
 }
 
-@keyframes fly-zeppelin {
-	0% {
-		left: -52%;
-	}
-	18% {
-		transform: translate3d(0, 5px, 0);
-	}
-	18.5% {
-		transform: translate3d(0, -5px, 0);
-	}
-	19% {
-		transform: translate3d(0, 0, 0);
-	}
-	29% {
-		transform: translate3d(0, 5px, 0);
-	}
-	29.5% {
-		transform: translate3d(0, -5px, 0);
-	}
-	30% {
-		transform: translate3d(0, 0, 0);
-	}
-	50% {
-		left: 102%;
-	}
-	100% {
-		left: 102%;
-	}
+@keyframes exhaust-reverse {
+  68.5% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.5);
+  }
+  69% {
+    opacity: 0.8;
+  }
+  69.5% {
+    opacity: 0;
+    transform: translate3d(10px, 0, 0) scale(1);
+  }
+  79.5% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.5);
+  }
+  80% {
+    opacity: 0.8;
+  }
+  80.5% {
+    opacity: 0;
+    transform: translate3d(10px, 0, 0) scale(1);
+  }
 }
+
+//@keyframes exhaust-reverse {
+//  18.5% {
+//    opacity: 0;
+//    transform: translate3d(15px, 0, 0) scale(1);
+//  }
+//  19% {
+//    opacity: 0.8;
+//  }
+//  19.5% {
+//    opacity: 0;
+//    transform: translate3d(0, 0, 0) scale(0.5);
+//  }
+//  29.5% {
+//    opacity: 0;
+//    transform: translate3d(15px, 0, 0) scale(1);
+//  }
+//  30% {
+//    opacity: 0.8;
+//  }
+//  30.5% {
+//    opacity: 0;
+//    transform: translate3d(0, 0, 0) scale(0.5);
+//  }
+//}
