@@ -12,7 +12,7 @@ $anim-time: 120s;
 	bottom: 200px;
 	z-index: 10;
 
-	.active & {
+	.content-loaded & {
 		animation: fly-zeppelin $anim-time linear infinite;
 	}
 
@@ -47,7 +47,7 @@ $anim-time: 120s;
 
 	opacity: 0;
 
-	.active & {
+	.content-loaded & {
 		animation: exhaust $anim-time ease infinite;
 	}
 
@@ -56,7 +56,7 @@ $anim-time: 120s;
   //  left: auto;
   //  right: -9%;
   //
-  //  .active & {
+  //  .content-loaded & {
   //    animation: exhaust-reverse $anim-time ease infinite;
   //  }
   //}

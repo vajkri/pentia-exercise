@@ -5,7 +5,8 @@
     "jquery": "~2.1.1",
     "modernizr": "~2.8.1",
     "angular": "^1.5.0",
-    "gsap": "^1.18.2"
+    "gsap": "^1.18.2",
+    "angular-ui-router": "^0.2.18"
   },
   "devDependencies": {
     "chai": "^3.5.0",

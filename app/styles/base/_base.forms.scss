@@ -17,6 +17,15 @@ form {
 		margin: $spacing-vertical-palm auto;
 		padding: 15px;
 	}
+
+  opacity: 0;
+  transform: scale(0.7);
+  transition: 300ms 3.2s cubic-bezier(.45,1.8,.5,.75);
+
+  .content-loaded & {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .form__instructions {

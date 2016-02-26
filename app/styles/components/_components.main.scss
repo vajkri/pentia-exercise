@@ -22,7 +22,7 @@ main {
     max-width: 100%;
   }
 
-	&.active {
+	&.content-loaded {
 		transform: scaleX(1);
 
 		&:after {

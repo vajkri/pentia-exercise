@@ -5,11 +5,11 @@
 app.directive('staggerAnimate', function() {
   return function(scope, element) {
     var ease = Elastic.easeOut;
-    TweenMax.staggerFrom(element.children(), 1.1, {
+    TweenMax.staggerFrom(element.children(), 1, {
       scale: 0.7,
       opacity: 0,
-      delay: 0.5,
+      delay: 1,
       ease: ease
-    }, 0.095);
+    }, 0.05);
   }
 });

@@ -6,6 +6,14 @@ app.controller('MainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
   $scope.showSuccess = false;
   $scope.registerFormSubmitted = false;
 
+  $scope.contentLoaded = false;
+  console.log('$scope.contentLoaded', $scope.contentLoaded);
+  $scope.$on('$viewContentLoaded', function(event) {
+    $timeout(function() {
+      $scope.contentLoaded = true;
+      console.log('$scope.contentLoaded', $scope.contentLoaded);
+    },0);
+  });
 
   /* *
   Suggested form data structure in JSON:
