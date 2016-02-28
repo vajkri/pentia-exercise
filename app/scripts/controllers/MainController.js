@@ -11,7 +11,6 @@ app.controller('MainCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
   $scope.$on('$viewContentLoaded', function(event) {
     $timeout(function() {
       $scope.contentLoaded = true;
-      console.log('$scope.contentLoaded', $scope.contentLoaded);
     },0);
   });
 
